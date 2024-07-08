@@ -37,21 +37,25 @@
     }
 
     &:has(+ .split-char:hover) {
+      filter: drop-shadow(yellow 0rem 0rem 1.5px);
       font-weight: var(--_fw-700);
       color: var(--_clr-700);
   
     }
     
     &:has(+ .split-char + .split-char:hover) {
+      filter: drop-shadow(yellow 0rem 0rem 0.5px);
       font-weight: var(--_fw-400);
       color: var(--_clr-400);
   
     }
     &:hover + .split-char {
+      filter: drop-shadow(yellow 0rem 0rem 1.5px);
       font-weight: var(--_fw-700);
       color: var(--_clr-700);
     }
     &:hover + .split-char + .split-char {
+      filter: drop-shadow(yellow 0rem 0rem 0.5px);
       font-weight: var(--_fw-400);
       color: var(--_clr-400);
     }
