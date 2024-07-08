@@ -32,10 +32,10 @@
 
   & .split-char{
     font-weight: 200;
-    transition: font-weight 0.5s ease;
+    transition: font-weight 0.2s ease;
 
     &:hover {
-      filter: drop-shadow(white 0rem 0rem 10px);
+      filter: drop-shadow(yellow 0rem 0rem 10px);
       font-weight: var(--_fw-900);
       color: var(--_clr-900);
     }
