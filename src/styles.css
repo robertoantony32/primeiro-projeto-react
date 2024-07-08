@@ -24,11 +24,7 @@
   font-size: clamp(2rem, calc(2rem + 3.5vw), 5rem);
   color: hsl(0, 0%, 50%);
   user-select: none;
-
-
-  & .split-text {
-    display: inline-flex;
-  }
+  display: inline-flex;
 
   & .split-char{
     font-weight: 200;
