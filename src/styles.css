@@ -28,6 +28,7 @@
 
   & .split-char{
     font-weight: 200;
+    padding-right: 2px;
     transition: font-weight 0.2s ease;
 
     &:hover {
