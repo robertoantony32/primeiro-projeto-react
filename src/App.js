@@ -1,58 +1,12 @@
 import "./styles.css";
 import Title from "./components/Title";
-import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import api from "./services/api";
+import Search from "./components/Search";
 
 function App() {
-  const [input, setInput] = useState("");
-  const [cep, setCep] = useState("");
-
-  async function handleSearch() {
-    if (input === "") {
-      alert("Preencha com algum cep!");
-      return;
-    }
-
-    try {
-      const response = await api.get(`${input}/json`);
-      setCep(response.data);
-      setInput("");
-    } catch {
-      alert("Cep inválido!");
-      setInput("");
-      setCep("");
-    }
-  }
-
   return (
     <div className="container">
-
       <Title/>
-      
-
-      <div className="containerInput">
-        <input
-          type="text"
-          placeholder="Digte seu cep..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button className="buttonSearch" onClick={handleSearch}>
-          <FiSearch size={25} color="#FFF" />
-        </button>
-      </div>
-      {Object.keys(cep).length > 0 && (
-        <main className="main">
-          <h2>CEP: {cep.cep}</h2>
-          <span>rua: {cep.logradouro}</span>
-          <span>complemento: {cep.complemento}</span>
-          <span>bairro: {cep.bairro}</span>
-          <span>
-            {cep.localidade} - {cep.uf}
-          </span>
-        </main>
-      )}
+      <Search/> 
     </div>
   );
 }
